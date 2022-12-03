@@ -1,0 +1,14 @@
+##To do this, create a file /etc/modprobe.d/blacklist-rtl2832.conf containing the following:
+
+
+# Blacklist RTL2832 so docker container piaware can use the device
+
+blacklist rtl2832
+blacklist dvb_usb_rtl28xxu
+blacklist rtl2832_sdr
+
+# Pull Docker Container
+docker pull ghcr.io/sdr-enthusiasts/docker-piaware:latest
+
+# Determine Feeder ID
+timeout 30 docker run --rm -e LAT=YOURLATITUDE -e LONG=YOURLONGITUDE ghcr.io/sdr-enthusiasts/docker-piaware:latest | grep "my feeder ID"
