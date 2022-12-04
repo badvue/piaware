@@ -16,6 +16,7 @@
       - FEEDER_ID=
       - RECEIVER_TYPE=rtlsdr
       - ALLOW_MLAT=yes
+      - MLAT_RESULTS=yes
     tmpfs:
       - /run:exec,size=64M
       - /var/log
