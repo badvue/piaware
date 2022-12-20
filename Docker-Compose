@@ -11,13 +11,14 @@
       - 30005:30005
     environment:
       - TZ=America/Chicago
-      - LAT=
-      - LONG=
-      - FEEDER_ID=
+      - LAT=LAT
+      - LONG=LONG
+      - FEEDER_ID=ID
       - RECEIVER_TYPE=rtlsdr
       - ALLOW_MLAT=yes
       - MLAT_RESULTS=yes
       - DUMP1090_ADAPTIVE_RANGE=true
+      - DUMP1090_ADAPTIVE_DUTY_CYCLE=100
     tmpfs:
       - /run:exec,size=64M
       - /var/log
