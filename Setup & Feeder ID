@@ -7,6 +7,11 @@ blacklist rtl2832
 blacklist dvb_usb_rtl28xxu
 blacklist rtl2832_sdr
 
+# If log is spammed with errors like "2019-04-29 21:14:31.642690500  [dump1090-fa] usb_claim_interface error -6", run these commands
+sudo rmmod rtl2832_sdr
+sudo rmmod dvb_usb_rtl28xxu
+sudo rmmod rtl2832
+
 # Pull Docker Container
 docker pull ghcr.io/sdr-enthusiasts/docker-piaware:latest
 
